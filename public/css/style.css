@@ -229,13 +229,13 @@ nav a.entrar:hover,nav a.entrar:focus-visible{color:var(--on-accent);transform:t
 @media (max-width:640px){.abas button{padding:8px 14px;font-size:14px}}
 
 /* Imagem de destaque da home */
-.capa{background:#EDF5E9 url(../assets/hero_predio.jpg) right -11vw center/auto 96% no-repeat;min-height:clamp(560px,57vw,780px);display:flex;align-items:center}
+.capa{background:#EDF5E9 url(../assets/hero_predio.jpg) right -11vw center/auto 96% no-repeat;min-height:clamp(500px,calc(100vh - 84px),780px);display:flex;align-items:center}
 .capa .wrap>div:first-child{max-width:min(640px,40vw)}
 header .wrap,.capa .wrap{max-width:none;padding-left:max(24px,4vw);padding-right:max(24px,4vw)}
 header .wrap{padding-right:max(20px,1.5vw)}
 .frase{align-items:flex-start}
 .capa::before,.capa::after{display:none}
-.capa .wrap{width:100%}
+.capa .wrap{width:100%;padding-block:20px 56px}
 @media (max-width:980px){
   .capa{background-size:auto 300px;background-position:right bottom;min-height:0;align-items:flex-start}
   .capa .wrap>div:first-child{max-width:none}
