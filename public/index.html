@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InfoPathos</title>
+<meta name="description" content="InfoPathos: informação de saúde que você entende, confere e quer compartilhar. Patologias, quiz, mitos e fatos e notícias, com as fontes à vista.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="brilho" id="brilho" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="InfoPathos, página inicial"><img alt="InfoPathos" src="assets/logo.png"></a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#equipe">Nossa equipe</a></li>
+        <li><a class="entrar" href="#login"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span class="longo">Área da Biomedicina</span><span class="curto">Entrar</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="capa" aria-roledescription="carrossel" aria-label="Frases do InfoPathos">
+    <div class="wrap">
+      <div>
+        <a class="chamada" id="chamada" href="#noticias" hidden></a>
+        <div class="frases" id="frases" aria-live="off">
+          <div class="frase ativa" role="group" aria-roledescription="slide" aria-label="1 de 3"><h1>Menos achismo, mais <em>ciência.</em></h1></div>
+          <div class="frase" role="group" aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true"><h1>Ciência de verdade, <em>linguagem de gente.</em></h1></div>
+          <div class="frase" role="group" aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true"><h1>Aprenda jogando, <em>cuide-se sabendo.</em></h1></div>
+        </div>
+        <p class="lead">Informação de saúde que você entende, confere e quer compartilhar.</p>
+        <div class="botoes">
+          <a class="btn primario" href="#noticias">Leia as últimas notícias <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+          <a class="btn vazado" href="#mito-ou-fato">Mitos e fatos</a>
+        </div>
+        <div class="controles">
+          <button type="button" id="anterior" aria-label="Frase anterior">&larr;</button>
+          <div class="pontos" id="pontos"></div>
+          <button type="button" id="proxima" aria-label="Próxima frase">&rarr;</button>
+          <button type="button" class="pausa" id="pausa" aria-label="Pausar a troca automática de frases">Pausar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blocos" aria-label="Conteúdos">
+    <div class="wrap">
+      <div class="cab-sec">
+        <h2>Aprenda do seu jeito</h2>
+        <p>Explore as patologias, teste o que sabe e confira o que circula por aí.</p>
+      </div>
+      <div class="grid" id="grade">
+        <a class="card s4 pat" id="patologias" href="#patologias">
+          <div class="fundo" id="pat-fundo"></div>
+          <div class="conteudo">
+            <h3>Patologias</h3>
+            <p id="pat-texto">Carregando…</p>
+            <div class="temas" id="pat-temas" aria-label="Patologias publicadas"></div>
+            <span class="mais" id="pat-mais">Ver patologia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+        <a class="card s2 quiz" id="quiz-card" href="#quiz">
+          <h3>Quiz</h3>
+          <div class="mock" id="quiz-mock" aria-hidden="true"></div>
+          <span class="mais">Fazer o quiz <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>
+        </a>
+        <div class="card s2 fontes">
+          <h3>Fontes à vista</h3>
+          <p>Cada conteúdo mostra as fontes consultadas, para você conferir.</p>
+          <div class="linhas" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="card s4 jogo" id="mito-ou-fato">
+          <div class="rot"><span>Mito ou fato?</span><span id="contador"></span></div>
+          <p class="afirm" id="afirmacao">Carregando…</p>
+          <div class="resp" role="group" aria-label="Sua resposta">
+            <button type="button" data-r="mito">Mito</button>
+            <button type="button" data-r="fato">Fato</button>
+          </div>
+          <div class="resultado" id="resultado" aria-live="polite">Escolha uma resposta para ver a explicação.</div>
+          <button type="button" class="prox" id="proximaAfirmacao" hidden>Próxima afirmação</button>
+          <p class="fonte-jogo" id="fonte-jogo"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="novidades" id="noticias" aria-label="Notícias">
+    <div class="wrap">
+      <div class="cab-sec"><h2>Últimas notícias</h2></div>
+      <div class="lista-posts" id="lista-noticias"><p class="vazio">Carregando…</p></div>
+    </div>
+  </section>
+
+  <section class="final" aria-label="Lema do InfoPathos">
+    <div class="bg" aria-hidden="true"><img src="assets/tl_hero.jpg" alt="" width="1100" height="1100"></div>
+    <div class="wrap"><h2>Ciência de verdade, <span>linguagem de gente.</span></h2></div>
+  </section>
+
+  <section class="apoio" aria-label="Apoio">
+    <div class="wrap">
+      <h2>Apoio</h2>
+      <div class="logos">
+        <div><img alt="Faculdade de Ciências Médicas da Santa Casa de São Paulo" src="assets/faculdade.png"></div>
+        <div><img alt="NúcleoTech, grupo de desenvolvimento do InfoPathos" src="assets/nucleotech.png"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<main id="pg-patologia" class="restrita pagina" hidden></main>
+<main id="pg-noticia" class="restrita pagina" hidden></main>
+<main id="pg-quiz" class="restrita pagina" hidden>
+  <div class="wrap estreito">
+    <a class="voltar" href="#inicio">&larr; Voltar para a home</a>
+    <span class="rotulo">Quiz</span>
+    <h1>Quiz</h1>
+    <div class="caixa quiz-pg" id="quiz-pg" aria-live="polite"></div>
+    <section class="caixa fontes-pg" id="quiz-fontes" hidden><h2>Fontes das perguntas</h2><ul class="fontes-lista" id="quiz-fontes-lista"></ul></section>
+  </div>
+</main>
+<main id="pg-sobre" class="restrita pagina" hidden>
+  <div class="wrap estreito">
+    <a class="voltar" href="#inicio">&larr; Voltar para a home</a>
+    <span class="rotulo">Sobre nós</span>
+    <h1>Ciência de verdade, linguagem de gente</h1>
+    <p class="lead-pg">O InfoPathos nasceu para explicar doenças de um jeito dinâmico e fácil de entender, principalmente para o público jovem. Aqui, a informação de saúde vem com quiz, mitos e fatos e notícias, sempre com as fontes à vista para você conferir.</p>
+    <section class="caixa"><h2>Por que existimos</h2>
+      <p class="apoio-txt">Muita informação sobre saúde circula sem fonte e sem cuidado, e isso afasta as pessoas do que a ciência realmente diz. Nosso objetivo é aproximar: explicar com palavras simples, sem deixar de lado o rigor, e mostrar de onde vem cada informação.</p>
+    </section>
+    <section class="caixa"><h2>Duas áreas, um projeto</h2>
+      <p class="apoio-txt">O site é resultado da junção de dois grupos da Faculdade de Ciências Médicas da Santa Casa de São Paulo: o grupo de Biomedicina e a equipe do NúcleoTech, de Análise e Desenvolvimento de Sistemas (ADS).</p>
+      <div class="duas-areas">
+        <div><h3>Grupo de Biomedicina</h3><p>Pesquisa, escreve e confere o conteúdo de saúde: patologias, perguntas do quiz, mitos e fatos e notícias, com as fontes consultadas.</p></div>
+        <div><h3>NúcleoTech (ADS)</h3><p>Desenha e programa o site e o painel que permite à equipe de Biomedicina publicar e atualizar o conteúdo sozinha.</p></div>
+      </div>
+    </section>
+    <section class="caixa" id="equipe"><h2>Nossa equipe</h2><p class="apoio-txt">Em breve, a apresentação de quem faz o InfoPathos.</p></section>
+  </div>
+</main>
+
+<main id="login-pagina" class="restrita" hidden>
+  <div class="wrap">
+    <form class="caixa login-caixa" id="form-login" novalidate>
+      <span class="rotulo">Área restrita</span>
+      <h1>Área da Biomedicina</h1>
+      <p class="apoio-txt">Entre para adicionar patologias, quizzes, mitos e fatos e notícias ao site.</p>
+      <div class="campo"><label for="lg-user">Usuário</label><input id="lg-user" type="text" autocomplete="username" autocapitalize="none" spellcheck="false"></div>
+      <div class="campo"><label for="lg-senha">Senha</label><input id="lg-senha" type="password" autocomplete="current-password"></div>
+      <p class="erro-login" id="erro-login" role="alert" hidden></p>
+      <button class="btn" type="submit" id="btn-entrar">Entrar</button>
+      <p class="aviso">Acesso compartilhado da equipe de Biomedicina. Não divulgue a senha fora do grupo.</p>
+    </form>
+  </div>
+</main>
+
+<main id="painel" class="restrita" hidden>
+  <div class="wrap">
+    <div class="painel-topo">
+      <div><span class="rotulo">Painel do grupo</span><h1>O que vamos publicar hoje?</h1></div>
+      <button class="btn sec" type="button" id="sair">Sair</button>
+    </div>
+    <div class="abas" role="tablist" aria-label="Categorias" id="abas"></div>
+    <section class="caixa lista-adm" aria-label="Conteúdos desta categoria">
+      <div class="lista-topo"><h2 id="lista-titulo"></h2><button class="btn sec" type="button" id="novo">+ Novo</button></div>
+      <ul class="itens-adm" id="itens-adm"></ul>
+    </section>
+    <form class="caixa" id="form-conteudo" novalidate>
+      <h2 id="form-titulo"></h2>
+      <div class="form-corpo" id="form-corpo"></div>
+      <p class="erro-form" id="erro-form" role="alert" hidden></p>
+      <div class="acoes">
+        <button class="btn sec" type="button" data-acao="rascunho" id="btn-rascunho">Salvar rascunho</button>
+        <button class="btn" type="button" data-acao="publicar" id="btn-publicar">Publicar</button>
+        <button class="btn sec" type="button" id="btn-cancelar" hidden>Cancelar edição</button>
+        <span class="status" id="status" role="status" aria-live="polite"></span>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="topo">
+      <div>
+        <img alt="InfoPathos" src="assets/logo.png">
+        <p class="slogan">Ciência de verdade, linguagem de gente.</p>
+      </div>
+      <ul>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#equipe">Nossa equipe</a></li>
+        <li><a href="#login">Área restrita</a></li>
+      </ul>
+    </div>
+    <small>Conteúdo educativo produzido pelo grupo de Biomedicina; não substitui orientação de profissional de saúde.</small>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

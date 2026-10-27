@@ -1,0 +1,10 @@
+{
+  "name": "infopathos",
+  "version": "1.0.0",
+  "description": "InfoPathos: site de informação em saúde com área restrita para o grupo de Biomedicina.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node test/testar.js", "trocar-senha": "node trocar-senha.js" },
+  "engines": { "node": ">=22.13" },
+  "license": "UNLICENSED",
+  "private": true
+}

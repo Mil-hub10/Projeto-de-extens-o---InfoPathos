@@ -1,0 +1,307 @@
+[
+ {
+  "tipo": "patologia",
+  "status": "publicado",
+  "dados": {
+   "nome": "Febre amarela",
+   "resumo": "Doença infecciosa grave, causada por um vírus e transmitida pela picada de mosquitos infectados. Não passa de pessoa para pessoa.",
+   "imagem": "/assets/fa_mosquito.jpg",
+   "credito_texto": "BBC News Brasil",
+   "credito_url": "https://www.bbc.com/portuguese/geral-42713247",
+   "secoes": [
+    {
+     "titulo": "O que é",
+     "alerta": false,
+     "itens": [
+      "Doença infecciosa grave, causada por um vírus (flavivírus) e transmitida pela picada de mosquitos infectados.",
+      "Não passa de pessoa para pessoa."
+     ]
+    },
+    {
+     "titulo": "Ciclos de transmissão",
+     "alerta": false,
+     "itens": [
+      "**Silvestre:** ocorre em áreas de mata, com mosquitos Haemagogus e Sabethes infectando macacos e humanos.",
+      "**Urbano:** transmitido pelo Aedes aegypti em cidades."
+     ]
+    },
+    {
+     "titulo": "Sintomas",
+     "alerta": false,
+     "itens": [
+      "Muitas pessoas não apresentam sintomas ou têm sintomas leves.",
+      "Quando surgem, começam de forma repentina: febre alta, calafrios, cansaço, dor de cabeça, dores musculares, náuseas e vômitos por cerca de três dias."
+     ]
+    },
+    {
+     "titulo": "Forma grave",
+     "alerta": false,
+     "itens": [
+      "É rara e costuma aparecer após um breve período de melhora (até dois dias).",
+      "Pode causar insuficiência do fígado e dos rins, icterícia (pele e olhos amarelados), sangramentos e fraqueza intensa."
+     ]
+    },
+    {
+     "titulo": "Diagnóstico",
+     "alerta": false,
+     "itens": [
+      "Avaliação clínica e epidemiológica: sintomas e histórico de exposição ou viagem a áreas de risco.",
+      "Confirmação por exames laboratoriais."
+     ]
+    },
+    {
+     "titulo": "Tratamento",
+     "alerta": false,
+     "itens": [
+      "Não existe antiviral específico.",
+      "O cuidado é o controle dos sintomas e o suporte clínico."
+     ]
+    },
+    {
+     "titulo": "Prevenção",
+     "alerta": false,
+     "itens": [
+      "Vacina em dose única, gratuita pelo SUS.",
+      "Indicada para quem mora em áreas de risco e para quem vai viajar para elas, com aplicação pelo menos 10 dias antes da viagem.",
+      "Contraindicações e precauções: bebês menores de 6 meses, pessoas com imunossupressão grave e alergia grave a ovo ou a componentes da vacina. Em caso de dúvida, consulte um profissional de saúde antes de se vacinar.",
+      "Uso de repelente e roupas que cubram o corpo ajuda a reduzir as picadas."
+     ]
+    },
+    {
+     "titulo": "Quando procurar ajuda",
+     "alerta": true,
+     "itens": [
+      "**Imediatamente,** diante de febre repentina após estadia em área rural, de mata ou de risco, principalmente sem vacinação.",
+      "**Com urgência,** se aparecerem sinais de alerta: pele ou olhos amarelados, sangramentos, vômitos persistentes, urina escura ou sonolência."
+     ]
+    },
+    {
+     "titulo": "Recuperação",
+     "alerta": false,
+     "itens": [
+      "A maioria dos infectados se recupera bem e adquire imunidade permanente."
+     ]
+    }
+   ],
+   "fontes": [
+    {
+     "titulo": "Bula da vacina de febre amarela (Bio-Manguinhos/Fiocruz)",
+     "url": "https://www.bio.fiocruz.br/images/bulas-profissional-de-saude-vacina-febre_Amarela-5-e-10-doses.pdf"
+    },
+    {
+     "titulo": "Ministério da Saúde: febre amarela",
+     "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/f/febre-amarela"
+    },
+    {
+     "titulo": "Prefeitura de São Paulo: vigilância em saúde, febre amarela",
+     "url": "https://prefeitura.sp.gov.br/web/saude/w/vigilancia_em_saude/doencas_e_agravos/febre_amarela"
+    },
+    {
+     "titulo": "Fiocruz: febre amarela",
+     "url": "https://fiocruz.br/taxonomia-geral-05-doencas/febre-amarela"
+    }
+   ]
+  }
+ },
+ {
+  "tipo": "quiz",
+  "status": "publicado",
+  "dados": {
+   "pergunta": "Qual é um sintoma comum da febre amarela?",
+   "alternativas": [
+    "Coceira e bolhas nas mãos",
+    "Dor de ouvido e secreção",
+    "Tosse com catarro por mais de 3 semanas",
+    "Febre, dor de cabeça e dores no corpo"
+   ],
+   "correta": 3,
+   "explicacao": "A febre amarela costuma começar com febre, dor de cabeça, dores musculares, náuseas e cansaço. Em casos graves, pode surgir icterícia (pele e olhos amarelados), o que dá nome à doença, além de sangramentos.",
+   "fontes": [
+    {
+     "titulo": "Bula da vacina de febre amarela (Bio-Manguinhos/Fiocruz)",
+     "url": "https://www.bio.fiocruz.br/images/bulas-profissional-de-saude-vacina-febre_Amarela-5-e-10-doses.pdf"
+    },
+    {
+     "titulo": "Ministério da Saúde: febre amarela",
+     "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/f/febre-amarela"
+    },
+    {
+     "titulo": "Prefeitura de São Paulo: vigilância em saúde, febre amarela",
+     "url": "https://prefeitura.sp.gov.br/web/saude/w/vigilancia_em_saude/doencas_e_agravos/febre_amarela"
+    },
+    {
+     "titulo": "Fiocruz: febre amarela",
+     "url": "https://fiocruz.br/taxonomia-geral-05-doencas/febre-amarela"
+    }
+   ]
+  }
+ },
+ {
+  "tipo": "quiz",
+  "status": "publicado",
+  "dados": {
+   "pergunta": "Qual mosquito transmite a febre amarela silvestre no Brasil?",
+   "alternativas": [
+    "Haemagogus e Sabethes",
+    "Anopheles",
+    "Lutzomyia (mosquito-palha)",
+    "Culex"
+   ],
+   "correta": 0,
+   "explicacao": "No ciclo silvestre, a febre amarela é transmitida por mosquitos dos gêneros Haemagogus e Sabethes, que vivem em matas e infectam macacos e humanos. O Anopheles transmite a malária, o Culex pode transmitir filariose e o Lutzomyia transmite leishmaniose.",
+   "fontes": [
+    {
+     "titulo": "Bula da vacina de febre amarela (Bio-Manguinhos/Fiocruz)",
+     "url": "https://www.bio.fiocruz.br/images/bulas-profissional-de-saude-vacina-febre_Amarela-5-e-10-doses.pdf"
+    },
+    {
+     "titulo": "Ministério da Saúde: febre amarela",
+     "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/f/febre-amarela"
+    },
+    {
+     "titulo": "Prefeitura de São Paulo: vigilância em saúde, febre amarela",
+     "url": "https://prefeitura.sp.gov.br/web/saude/w/vigilancia_em_saude/doencas_e_agravos/febre_amarela"
+    },
+    {
+     "titulo": "Fiocruz: febre amarela",
+     "url": "https://fiocruz.br/taxonomia-geral-05-doencas/febre-amarela"
+    }
+   ]
+  }
+ },
+ {
+  "tipo": "quiz",
+  "status": "publicado",
+  "dados": {
+   "pergunta": "Qual é a melhor forma de se proteger da febre amarela?",
+   "alternativas": [
+    "Tomar a vacina",
+    "Tomar antibiótico",
+    "Evitar contato com pessoas doentes",
+    "Lavar bem as mãos"
+   ],
+   "correta": 0,
+   "explicacao": "A febre amarela é causada por um vírus transmitido por mosquitos, não por contato entre pessoas. Antibiótico não age contra vírus. A vacina, oferecida de graça pelo SUS, é a forma mais eficaz de prevenção.",
+   "fontes": [
+    {
+     "titulo": "Bula da vacina de febre amarela (Bio-Manguinhos/Fiocruz)",
+     "url": "https://www.bio.fiocruz.br/images/bulas-profissional-de-saude-vacina-febre_Amarela-5-e-10-doses.pdf"
+    },
+    {
+     "titulo": "Ministério da Saúde: febre amarela",
+     "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/f/febre-amarela"
+    },
+    {
+     "titulo": "Prefeitura de São Paulo: vigilância em saúde, febre amarela",
+     "url": "https://prefeitura.sp.gov.br/web/saude/w/vigilancia_em_saude/doencas_e_agravos/febre_amarela"
+    },
+    {
+     "titulo": "Fiocruz: febre amarela",
+     "url": "https://fiocruz.br/taxonomia-geral-05-doencas/febre-amarela"
+    }
+   ]
+  }
+ },
+ {
+  "tipo": "quiz",
+  "status": "publicado",
+  "dados": {
+   "pergunta": "Sobre a febre amarela no Brasil, qual das alternativas está correta?",
+   "alternativas": [
+    "É transmitida de pessoa para pessoa por contato direto ou por gotículas respiratórias.",
+    "O mosquito Aedes aegypti é o único vetor, e só existe transmissão urbana.",
+    "É causada por um flavivírus transmitido por mosquitos, e a vacinação é a principal forma de prevenção.",
+    "É causada por uma bactéria e tratada com antibióticos específicos."
+   ],
+   "correta": 2,
+   "explicacao": "A febre amarela é causada por um vírus do gênero Flavivirus e transmitida pela picada de mosquitos infectados: Haemagogus e Sabethes no ciclo silvestre, e Aedes aegypti no ciclo urbano. Não passa de pessoa para pessoa diretamente e não é causada por bactéria, então antibiótico não funciona. Não existe tratamento antiviral específico, apenas suporte clínico, por isso a vacina (dose única, oferecida pelo SUS) é a principal estratégia de prevenção. Hoje, os casos no Brasil ocorrem no ciclo silvestre.",
+   "fontes": [
+    {
+     "titulo": "Bula da vacina de febre amarela (Bio-Manguinhos/Fiocruz)",
+     "url": "https://www.bio.fiocruz.br/images/bulas-profissional-de-saude-vacina-febre_Amarela-5-e-10-doses.pdf"
+    },
+    {
+     "titulo": "Ministério da Saúde: febre amarela",
+     "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/f/febre-amarela"
+    },
+    {
+     "titulo": "Prefeitura de São Paulo: vigilância em saúde, febre amarela",
+     "url": "https://prefeitura.sp.gov.br/web/saude/w/vigilancia_em_saude/doencas_e_agravos/febre_amarela"
+    },
+    {
+     "titulo": "Fiocruz: febre amarela",
+     "url": "https://fiocruz.br/taxonomia-geral-05-doencas/febre-amarela"
+    }
+   ]
+  }
+ },
+ {
+  "tipo": "mito",
+  "status": "publicado",
+  "dados": {
+   "afirmacao": "O vírus da febre amarela é transmitido por macacos.",
+   "tipo": "mito",
+   "explicacao": "O vírus é transmitido pela picada dos mosquitos Haemagogus e Sabethes, que vivem em matas fechadas. Ao picar um macaco doente, o mosquito passa a transmitir o vírus a outros macacos e às pessoas que entram na mata. Por isso, os macacos funcionam como sentinelas, alertando para a circulação do vírus na região.",
+   "fontes": [
+    {
+     "titulo": "Bula da vacina de febre amarela (Bio-Manguinhos/Fiocruz)",
+     "url": "https://www.bio.fiocruz.br/images/bulas-profissional-de-saude-vacina-febre_Amarela-5-e-10-doses.pdf"
+    },
+    {
+     "titulo": "Ministério da Saúde: febre amarela",
+     "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/f/febre-amarela"
+    },
+    {
+     "titulo": "Prefeitura de São Paulo: vigilância em saúde, febre amarela",
+     "url": "https://prefeitura.sp.gov.br/web/saude/w/vigilancia_em_saude/doencas_e_agravos/febre_amarela"
+    },
+    {
+     "titulo": "Fiocruz: febre amarela",
+     "url": "https://fiocruz.br/taxonomia-geral-05-doencas/febre-amarela"
+    }
+   ]
+  }
+ },
+ {
+  "tipo": "mito",
+  "status": "publicado",
+  "dados": {
+   "afirmacao": "A febre amarela é transmitida de uma pessoa para outra.",
+   "tipo": "mito",
+   "explicacao": "Não, a transmissão se dá apenas pela picada de mosquitos infectados com o vírus da Febre Amarela.",
+   "fontes": [
+    {
+     "titulo": "Bula da vacina de febre amarela (Bio-Manguinhos/Fiocruz)",
+     "url": "https://www.bio.fiocruz.br/images/bulas-profissional-de-saude-vacina-febre_Amarela-5-e-10-doses.pdf"
+    },
+    {
+     "titulo": "Ministério da Saúde: febre amarela",
+     "url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/f/febre-amarela"
+    },
+    {
+     "titulo": "Prefeitura de São Paulo: vigilância em saúde, febre amarela",
+     "url": "https://prefeitura.sp.gov.br/web/saude/w/vigilancia_em_saude/doencas_e_agravos/febre_amarela"
+    },
+    {
+     "titulo": "Fiocruz: febre amarela",
+     "url": "https://fiocruz.br/taxonomia-geral-05-doencas/febre-amarela"
+    }
+   ]
+  }
+ },
+ {
+  "tipo": "noticia",
+  "status": "publicado",
+  "dados": {
+   "titulo": "Vítimas frequentes da febre amarela, macacos sofrem com a desinformação sobre a doença",
+   "resumo": "Com o aumento dos casos de febre amarela em 2025, a matéria destaca que os macacos, vítimas e sentinelas do vírus, são ameaçados tanto pela doença quanto por agressões motivadas pelo mito de que transmitem o vírus. Especialistas reforçam que a transmissão é feita por mosquitos e que proteger os animais ajuda a proteger as pessoas.",
+   "texto": "A febre amarela silvestre é transmitida por mosquitos dos gêneros Haemagogus e Sabethes, que vivem em áreas úmidas e se reproduzem em criadouros naturais, como as copas das árvores. Como circulam nesse ambiente, os macacos tornam-se as principais vítimas, enquanto pessoas não vacinadas em regiões de risco também podem ser infectadas.\n\nO desaparecimento dos macacos causa desequilíbrio ambiental, levando os mosquitos a voar mais baixo e buscar outras fontes de alimento, como os humanos. Todos os primatas neotropicais são suscetíveis ao vírus, mas bugios e saguis têm alta letalidade, enquanto macacos-prego parecem adquirir imunidade com mais facilidade. Com a morte de muitos animais, a população local pode até desaparecer.\n\nEm 2025, a Secretaria de Saúde de São Paulo confirmou nove casos em humanos, incluindo cinco óbitos, e nenhuma das vítimas era vacinada. O Ministério da Saúde também emitiu alerta para o período sazonal da doença, de dezembro a maio, com destaque para São Paulo, Minas Gerais, Roraima e Tocantins.\n\nOs macacos não transmitem a doença, que também não é contagiosa entre pessoas e animais. Como raramente sobrevivem, a morte deles serve de alerta para as autoridades de saúde, que podem ampliar a vacinação antes que os casos em humanos aumentem. Segundo o biólogo Fabiano Rodrigues de Melo, os macacos merecem gratidão, e não hostilidade.\n\nMatar animais silvestres é crime ambiental, previsto na Lei nº 9.605/98, com pena de detenção e multa. O ICMBio orienta não manipular macacos mortos ou debilitados e avisar as secretarias de saúde. Macacos saudáveis não devem ser capturados, agredidos, alimentados ou retirados do habitat, e agressões podem ser denunciadas à Linha Verde do Ibama (0800 61 8080).",
+   "data": "2025-02-12",
+   "fonte_nome": "G1 Campinas e Região, Terra da Gente",
+   "fonte_url": "https://g1.globo.com/sp/campinas-regiao/terra-da-gente/noticia/2025/02/12/vitimas-frequentes-da-febre-amarela-macacos-sofrem-com-a-desinformacao-sobre-a-doenca.ghtml",
+   "imagem": "/assets/fa_macaco.jpg",
+   "credito_texto": "Rede Metropolitana",
+   "credito_url": "https://redemetropolitana.com.br/nazare-paulista-confirma-morte-de-macaco-por-febre-amarela/"
+  }
+ }
+]
