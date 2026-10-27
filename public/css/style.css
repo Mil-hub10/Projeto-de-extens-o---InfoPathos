@@ -432,3 +432,11 @@ header .wrap{padding-right:max(20px,1.5vw)}
   .sb-mais{justify-self:center}
 }
 @media (max-width:520px){.sb-passos{grid-template-columns:1fr}}
+
+.sb-largo{min-height:0;padding:36px}
+.sb-largo h2{margin:10px 0 4px}
+.sb-largo p{max-width:50%}
+.sb-duas .sb-area{min-height:230px}
+.sb-area h3{max-width:none}
+.sb-faixa .sb-cab .rotulo{display:none}
+@media (max-width:900px){.sb-largo p{max-width:none}}
