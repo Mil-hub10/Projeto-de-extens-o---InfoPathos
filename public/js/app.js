@@ -537,4 +537,20 @@
     }, { threshold: 0.12 });
     Array.prototype.forEach.call(els, function (e) { io.observe(e); });
   })();
+  /* ---------- Sobre nós: vídeo (aparece sozinho quando o arquivo assets/sobre.mp4 existir) ---------- */
+  (function () {
+    var box = document.getElementById('sb-video');
+    if (!box || !window.fetch) return;
+    fetch('assets/sobre.mp4', { method: 'HEAD' }).then(function (r) {
+      if (!r.ok || !/video/.test(r.headers.get('content-type') || '')) return;
+      var v = document.createElement('video');
+      v.controls = true; v.preload = 'metadata'; v.setAttribute('playsinline', '');
+      v.setAttribute('aria-label', 'Vídeo de apresentação do InfoPathos');
+      var f = document.createElement('source'); f.src = 'assets/sobre.mp4'; f.type = 'video/mp4';
+      v.appendChild(f);
+      var vazio = document.getElementById('sb-video-vazio');
+      if (vazio) vazio.remove();
+      box.appendChild(v);
+    }).catch(function () {});
+  })();
 })();

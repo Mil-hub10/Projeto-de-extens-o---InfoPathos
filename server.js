@@ -21,7 +21,7 @@ const SEGREDO = db.getConfig(conn, 'segredo');
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp',
-  '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.txt': 'text/plain; charset=utf-8' };
+  '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.mp4': 'video/mp4', '.webm': 'video/webm', '.txt': 'text/plain; charset=utf-8' };
 
 const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'";
 function cabecalhos(extra) {
@@ -141,8 +141,19 @@ function enviaArquivo(req, res, base, relativo, cacheLongo) {
   fs.stat(alvo, (e, st) => {
     if (e || !st.isFile()) { res.writeHead(404, cabecalhos({ 'Content-Type': 'text/plain; charset=utf-8' })); return res.end('Página não encontrada'); }
     const ext = path.extname(alvo).toLowerCase();
-    res.writeHead(200, cabecalhos({ 'Content-Type': MIME[ext] || 'application/octet-stream', 'Content-Length': st.size,
-      'Cache-Control': cacheLongo ? 'public, max-age=86400' : 'no-cache' }));
+    const tipo = MIME[ext] || 'application/octet-stream';
+    const cache = cacheLongo ? 'public, max-age=86400' : 'no-cache';
+    // Vídeos precisam de "Range" para o navegador conseguir avançar e voltar.
+    const rg = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range || '');
+    if (rg && (ext === '.mp4' || ext === '.webm')) {
+      let ini = rg[1] === '' ? Math.max(0, st.size - Number(rg[2])) : Number(rg[1]);
+      let fim = rg[1] === '' || rg[2] === '' ? st.size - 1 : Math.min(Number(rg[2]), st.size - 1);
+      if (ini > fim || ini >= st.size) { res.writeHead(416, cabecalhos({ 'Content-Range': 'bytes */' + st.size })); return res.end(); }
+      res.writeHead(206, cabecalhos({ 'Content-Type': tipo, 'Content-Length': fim - ini + 1, 'Content-Range': 'bytes ' + ini + '-' + fim + '/' + st.size, 'Accept-Ranges': 'bytes', 'Cache-Control': cache }));
+      if (req.method === 'HEAD') return res.end();
+      return fs.createReadStream(alvo, { start: ini, end: fim }).pipe(res);
+    }
+    res.writeHead(200, cabecalhos({ 'Content-Type': tipo, 'Content-Length': st.size, 'Accept-Ranges': 'bytes', 'Cache-Control': cache }));
     if (req.method === 'HEAD') return res.end();
     fs.createReadStream(alvo).pipe(res);
   });

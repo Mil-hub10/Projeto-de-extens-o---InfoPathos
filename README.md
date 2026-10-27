@@ -1,13 +1,10 @@
-# Projeto-de-extens-o---InfoPathos
-O InfoPathos é um site educativo do grupo de Biomedicina que explica patologias para jovens, com ciência de verdade e linguagem de gente. Tem notícias, quizzes e o jogo Mitos e fatos, sempre com as fontes à vista. Uma área restrita com login permite que o grupo adicione novos conteúdos.
+# InfoPathos
 
-<img width="1501" height="774" alt="image" src="https://github.com/user-attachments/assets/076dae25-df96-451d-950f-3a180eaaefbd" />
-
-## Site real (código)
+Site de informação em saúde (patologias, quiz, mitos e fatos e notícias) com uma área restrita para o grupo de Biomedicina publicar conteúdo. Feito pelo NúcleoTech.
 
 Não tem dependências para instalar: roda só com o Node.js (versão 22.13 ou mais nova).
 
-### Rodar no seu computador
+## Rodar no seu computador
 
 Defina a senha do grupo (ela só vale na primeira vez que o site sobe) e inicie:
 
@@ -25,7 +22,7 @@ Abra http://localhost:3000. Na primeira vez o site cria o banco (`data/infopatho
 
 Entre pelo botão **Área da Biomedicina**, no canto superior direito.
 
-### Trocar a senha depois
+## Trocar a senha depois
 
 ```
 node trocar-senha.js "OutraSenhaForte123"
@@ -33,14 +30,14 @@ node trocar-senha.js "OutraSenhaForte123"
 
 A senha é guardada criptografada (scrypt), nunca em texto puro, e nenhuma senha fica escrita no código. O comando também encerra as sessões abertas.
 
-### Como o painel funciona
+## Como o painel funciona
 
 - **Publicar** coloca o conteúdo no ar na hora. **Salvar rascunho** guarda sem aparecer no site.
 - Para tirar algo do ar sem apagar: Editar, depois "Tirar do ar (salvar como rascunho)".
 - Todo conteúdo exige fonte para ser publicado. Links só aceitam http:// ou https://.
 - Imagens: JPG, PNG ou WEBP; fotos grandes são reduzidas automaticamente.
 
-### Colocar no ar
+## Colocar no ar
 
 Qualquer hospedagem que rode Node 22.13+ serve (Render, Railway, Fly.io, um servidor próprio). O importante:
 
@@ -50,20 +47,24 @@ Qualquer hospedagem que rode Node 22.13+ serve (Render, Railway, Fly.io, um serv
 4. Use HTTPS (as hospedagens acima já oferecem). O cookie de sessão só é marcado como seguro em HTTPS.
 5. Faça backup da pasta `DATA_DIR` de vez em quando.
 
-### Segurança já incluída
+## Segurança já incluída
 
 Senha criptografada, sessão em cookie HttpOnly/SameSite, bloqueio de 5 tentativas erradas de login por 15 minutos, validação de tudo o que chega do painel, conferência do conteúdo real das imagens enviadas, cabeçalhos de segurança (CSP) e texto sempre exibido como texto (sem HTML).
 
-### Testes
+## Testes
 
 ```
 npm test
 ```
 
-### Estrutura
+## Estrutura
 
 - `server.js`: servidor e API
 - `lib/`: banco (SQLite), login e validação
 - `public/`: o site (HTML, CSS, JS e imagens)
 - `seed.json`: conteúdo inicial (febre amarela, enviado pelo grupo)
 - `test/`: testes automáticos
+
+## Vídeo da página "Sobre nós"
+
+A página tem um espaço reservado para o vídeo de apresentação. Para colocá-lo no ar, salve o vídeo como `public/assets/sobre.mp4` (formato MP4, H.264) e reinicie/atualize o site. Quando o arquivo existir, o vídeo aparece sozinho no lugar do aviso "Em breve". Dica: comprima o vídeo antes (até uns 50 MB) para carregar rápido no celular.
