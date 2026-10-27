@@ -229,7 +229,7 @@ nav a.entrar:hover,nav a.entrar:focus-visible{color:var(--on-accent);transform:t
 @media (max-width:640px){.abas button{padding:8px 14px;font-size:14px}}
 
 /* Imagem de destaque da home */
-.capa{background:#EDF5E9 url(../assets/hero_predio.jpg) right -11vw center/auto 96% no-repeat;min-height:clamp(500px,calc(100vh - 84px),780px);display:flex;align-items:center}
+.capa{background:#EDF5E9 url(../assets/hero_predio.jpg) right -3vw center/auto min(118%,47vw) no-repeat;min-height:clamp(500px,calc(100vh - 84px),780px);display:flex;align-items:center}
 .capa .wrap>div:first-child{max-width:min(640px,40vw)}
 header .wrap,.capa .wrap{max-width:none;padding-left:max(24px,4vw);padding-right:max(24px,4vw)}
 header .wrap{padding-right:max(20px,1.5vw)}
