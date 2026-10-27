@@ -527,4 +527,14 @@
     limpa($('lista-noticias')).appendChild(h('p', { class: 'vazio', text: 'Não consegui carregar as notícias agora.' }));
   }).then(function () { dadosProntos = true; var ainda = aguardandoRota; aguardandoRota = false; if (ainda || location.hash) rota(); });
   rota();
+  /* ---------- Sobre nós: entrada suave ao rolar ---------- */
+  (function () {
+    var els = document.querySelectorAll('#pg-sobre .rev');
+    if (!('IntersectionObserver' in window)) return;
+    document.documentElement.classList.add('js');
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    Array.prototype.forEach.call(els, function (e) { io.observe(e); });
+  })();
 })();
